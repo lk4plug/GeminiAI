@@ -1,0 +1,276 @@
+/* --- GLOBÁLNÍ NASTAVENÍ A RESET --- */
+:root {
+    /* Barvy */
+    --color-dark-bg: #0F172A; /* Tmavé pozadí */
+    --color-dark-bg-alt: #1E293B; /* Alternativní tmavé pozadí (karty/sekce) */
+    --color-pulse-blue: #00F0FF; /* Neonově modrá */
+    --color-pulse-green: #39FF14; /* Neonově zelená */
+    --color-text-main: #E2E8F0; /* Světlý text */
+    --color-text-sub: #94A3B8; /* Šedý text */
+
+    /* Stíny (pro neonový efekt) */
+    --shadow-blue: 0 0 15px rgba(0, 240, 255, 0.6);
+    --shadow-green: 0 0 15px rgba(57, 255, 20, 0.6);
+
+    /* Fonty */
+    --font-primary: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--color-pulse-green);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    color: var(--color-pulse-green);
+}
+
+/* --- HEADER A NAVIGACE --- */
+header {
+    background-color: var(--color-dark-bg);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-pulse-blue);
+    text-decoration: none;
+    text-shadow: var(--shadow-blue);
+    transition: color 0.3s;
+}
+
+nav a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+nav a:hover {
+    color: var(--color-pulse-green);
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.7);
+}
+
+/* --- HERO SEKCE --- */
+.hero-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-dark-bg) 0%, #1e293b 50%, #001017 100%);
+    border-bottom: 5px solid var(--color-pulse-blue);
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: var(--shadow-blue);
+}
+
+.hero-content h1 strong {
+    color: var(--color-pulse-green);
+    text-shadow: var(--shadow-green);
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-pulse-blue);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-pulse-blue);
+    color: var(--color-dark-bg);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-blue);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-pulse-green);
+    box-shadow: var(--shadow-green);
+    color: var(--color-dark-bg);
+}
+
+/* --- KARTY SLOŽENÍ --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--color-dark-bg-alt);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card-blue { border-color: var(--color-pulse-blue); }
+.card-blue:hover { box-shadow: var(--shadow-blue); }
+.card-blue .icon { color: var(--color-pulse-blue); }
+
+.card-yellow { border-color: yellow; }
+.card-yellow:hover { box-shadow: 0 0 15px rgba(255, 255, 0, 0.6); }
+.card-yellow .icon { color: yellow; }
+
+.card-green { border-color: var(--color-pulse-green); }
+.card-green:hover { box-shadow: var(--shadow-green); }
+.card-green .icon { color: var(--color-pulse-green); }
+
+/* --- PRO & PROTI --- */
+.dark-bg-alt {
+    background-color: var(--color-dark-bg-alt);
+}
+
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.list-box {
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.pro-list {
+    background-color: rgba(57, 255, 20, 0.1);
+    border-left: 5px solid var(--color-pulse-green);
+}
+
+.pro-list h3 {
+    color: var(--color-pulse-green);
+}
+
+.con-list {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-left: 5px solid red;
+}
+
+.con-list h3 {
+    color: red;
+}
+
+.list-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-box li {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.list-box li strong {
+    font-weight: 700;
+}
+
+
+/* --- ZÁPATÍ --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--color-text-sub);
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+/* --- RESPOZIVITA (Pro menší obrazovky) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0.75rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .pros-cons-grid {
+        grid-template-columns: 1fr; /* Sloupce pod sebou */
+    }
+}
