@@ -1,13 +1,14 @@
-# ⚡ PulseUp: Moderní Web o Energetických Nápojích (HTML & CSS)
+# ⚡ ELECTRA: Věda Energetických Nápojů (Profesionální Verze)
 
-Jednoduchý a vizuálně moderní projekt postavený pouze na **HTML5** a **CSS3** s temným režimem (Dark Mode) a neonovými akcenty.
+Tento projekt představuje profesionální, pěti-stránkový web s moderním Dark Mode designem, zaměřený na vědeckou analýzu energetických nápojů.
 
-## 🚀 Technologie
+## 🚀 Klíčové Vlastnosti
 
-* **Jazyk:** HTML5
-* **Styling:** CSS3 (Responzivní)
-* **Font:** Google Fonts (Inter)
+* **Design:** High-Contrast Dark Mode s akcentní barvou Cyan (`#00FFFF`) pro moderní, technologický vzhled.
+* **Struktura:** Pět samostatných stránek pro lepší organizaci obsahu.
+* **Typografie:** Použití profesionálních fontů (Poppins, Inter) pro nadpisy a text.
+* **Layout:** Plně responzivní CSS.
 
-## 📂 Struktura Projektu
+## 📂 Struktura Souborů
 
-Projekt se skládá ze dvou hlavních souborů:
+Projekt vyžaduje šest souborů ve stejné složce:
