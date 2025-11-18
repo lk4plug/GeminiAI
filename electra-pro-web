@@ -1,0 +1,10 @@
+/electra-pro-web
+├── .gitignore             # 1. Ignoruje dočasné soubory
+├── index.html             # 2. Úvodní Vize (Domů)
+├── kontakt.html           # 3. Kontaktní formulář
+├── LICENSE                # 4. Licenční soubor
+├── README.md              # 5. Dokumentace projektu
+├── recenze.html           # 6. Hodnocení produktů
+├── slozeni.html           # 7. Vědecká Analýza Složek
+├── style.css              # 8. Centrální CSS Styly
+└── zdravi.html            # 9. Rizika a Benefity
